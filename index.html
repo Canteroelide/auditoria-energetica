@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditoría Energética</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Auditoría Energética</h1>
+        <form id="energyAuditForm">
+            <div class="mb-3">
+                <label for="floorSize" class="form-label">Tamaño del piso (m²):</label>
+                <input type="number" class="form-control" id="floorSize" required>
+            </div>
+            <div class="mb-3">
+                <label for="numPeople" class="form-label">Número de personas en el hogar:</label>
+                <input type="number" class="form-control" id="numPeople" required>
+            </div>
+            <div class="mb-3">
+                <label for="appliances" class="form-label">Seleccione los electrodomésticos:</label>
+                <select multiple class="form-control" id="appliances">
+                    <option value="fridge">Refrigerador</option>
+                    <option value="washingMachine">Lavadora</option>
+                    <option value="dishwasher">Lavavajillas</option>
+                    <option value="oven">Horno</option>
+                    <option value="microwave">Microondas</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Calcular Consumo</button>
+        </form>
+        <div id="results" class="mt-5"></div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
